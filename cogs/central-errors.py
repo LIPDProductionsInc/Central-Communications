@@ -111,7 +111,10 @@ class CommandErrorHandler(commands.Cog, name="Command Error Handler"):
             await ctx.send(f':x: | KeyError: {error} is not found')
             
         if isinstance(error, TypeError):
-            await ctx.send(f':x: | TypeError: {error}')
+            if ctx.command.qualified_name == 'bal' or ctx.command.qualified_name == 'balance':
+                await ctx.send(':x: | Not found in database. Please register with `cc!register`')
+            else:
+                await ctx.send(f':x: | TypeError: {error}')
             
         if isinstance(error, discord.HTTPException):
             await ctx.send(f':x: | HTTPException: {error.status} (error code: {error.code}): {error.text}')
