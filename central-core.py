@@ -26,7 +26,8 @@ initial_extensions = ['cogs.central-economy',
                       'cogs.central-errors',
                       'cogs.central-eject',
                       'cogs.central-custom',
-                      'cogs.central-owner'
+                      'cogs.central-owner',
+                      'cogs.central-slots'
                       ]
 
 
@@ -53,19 +54,17 @@ help_message = """
 """
 
 help_revival = """
-**cc!siren**: The siren Kallam uses
+**cc!sound**: The sounds Kallam uses
 
 **cc!graphics**: The visiual pack Kallam uses
 
-**cc!shader**: The shader Kallam uses
-
 **cc!map**: The map mod Kallam uses
 
-**cc!resident**: How to install the siren pack
-
-**cc!toko**: How to install TokoVoip
+**cc!saltychat**: SaltyChat is the VoIP used by Revival
 
 **cc!streamlist**: Get a list of current Revival RP streamers that automatically updates from HasRoot ||(Managed by LIPD Productions Inc.)||
+
+**cc!rcore**: rCore, parterned with Kallam and Revival
 
 **cc!sasp**: SASP Applications
 
@@ -80,7 +79,7 @@ help_revival = """
 **cc!sarcc**: SARCC Applications
 
 NEW COMMAND COMING SOON
-""" #**cc!revivalwiki**:
+"""
 
 help_discord = """
 **cc!sync**: How to sync your Discord and Twitch
@@ -92,6 +91,8 @@ help_discord = """
 **cc!po-box**: Kallam's PO box
 
 **cc!time**: Kallam's current time
+
+**cc!secretlab**: Kallam's chair
 """
 
 help_general = """
@@ -125,7 +126,7 @@ async def on_invite_create(invite):
 
 @bot.event
 async def on_ready():
-    print(f'Successfully logged in as {bot.user}, Running Verison 0.0.6.0'.format(bot))
+    print(f'Successfully logged in as {bot.user}, Running Verison 0.0.7.0'.format(bot))
     await bot.change_presence(activity=activity, status=status)
     #bot.load_extension('cogs.central-music')
     print('Cogs loaded:')

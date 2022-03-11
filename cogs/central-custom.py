@@ -92,7 +92,7 @@ class CustomCog(commands.Cog):
     @commands.command(name='juju')
     async def _juju(self, ctx):
         print('Someone be getting that sweet Juju')
-        await ctx.send("Get your Juju Energy and find your new go to fore theBEST energy drink can guzzle! Use code TROOPERK at checkout or hit the link below <http://www.jujuenergy.com/>")
+        await ctx.send("Get your Juju Energy and find your new go to fore the BEST energy drink can guzzle! Use code TROOPERK at checkout or hit the link below <http://www.jujuenergy.com/>")
         pass
 
     @commands.command(name='sync')
@@ -101,22 +101,16 @@ class CustomCog(commands.Cog):
         await ctx.send("How to sync your Discord and Twitch: https://discord.com/channels/731391566945714226/731391903580291103/732081933286244402")
         pass
 
-    @commands.command(name='siren')
+    @commands.command(name='sound')
     async def _siren(self, ctx):
         print('Siren pack requested...')
-        await ctx.send("The siren and weapon sounds that Kallam uses can be found here! <https://drive.google.com/drive/folders/1aXMXE6QOFklWsOqKLirPpMYUc0a8HyaI?usp=sharing>")
+        await ctx.send("The siren and weapon sounds that Kallam uses can be found here! https://drive.google.com/drive/folders/1aXMXE6QOFklWsOqKLirPpMYUc0a8HyaI?usp=sharing")
         pass
 
     @commands.command(name='graphics')
     async def _graphics(self, ctx):
         print('Visiual pack requested...')
-        await ctx.send("Trooper Kallam uses the graphics mods Reshade and a custom ENB adjusted by a RRP community member. You can download from here! > <https://drive.google.com/file/d/1hwk99KN4gdM1FdDN3Ie52laK1DgEhwSc/view?usp=sharing>. ENJOY!")
-        pass
-
-    @commands.command(name='shader')
-    async def _shader(self, ctx):
-        print('Shader pack requested...')
-        await ctx.send("The shader settings Kallam uses is found here! <https://gyazo.com/641c37d527c961cd8eba9894d887ba53>")
+        await ctx.send("The graphics mod is a remake of QuantV merged with Natural Vision Evolved, with a custom ENB and reshade made by Tiessen. If you are interested in learning more about it, open a ticket under <#944466196663775262>")
         pass
 
     @commands.command(name='map')
@@ -131,28 +125,22 @@ class CustomCog(commands.Cog):
         await ctx.send("You can sub FOR FREE if you have Amazon Prime! Simply click the Subscribe button and select “Twitch Prime” after connecting your accounts - More Info here - <https://twitch.amazon.com/prime>")
         pass
 
-    @commands.command(name='resident')
-    async def _resident(self, ctx):
-        print('Installing the sound pack...')
-        await ctx.send("Here's how to install the sound pack listed in `-siren`: <https://clips.twitch.tv/OnerousInnocentPenguinOptimizePrime>")
-        pass
-
     @commands.command(name='service')
     async def _service(self, ctx):
         print('Kallams LEO service requested...')
         await ctx.send("Kallam has 16 years in law enforcement with several different agencies; time in SWAT, K-9 training and FTO")
         pass
 
-    @commands.command(name='toko')
+    @commands.command(name='saltychat')
     async def _toko(self, ctx):
-        print('TokoVoip help requested...')
-        await ctx.send("The voice mod is a plugin for Teamspeak3, it can be found at: <https://github.com/Itokoyamato/TokoVOIP_TS3>")
+        print('SaltyChat requested...')
+        await ctx.send("Revival RP utilizes SaltyChat, a Team Speak 3 plugin, for in-game communication. Download the plugin here: <https://gaming.v10networks.com/saltychat/download/stable>")
         pass
 
     @commands.command(name='specs')
     async def _specs(self, ctx):
         print('PC specs requested')
-        await ctx.send("Kallam's PC specs: <https://pcpartpicker.com/list/brPxyk>")
+        await ctx.send("Coming Soon")
         pass
 
     @commands.command(name='merch')
@@ -177,7 +165,7 @@ class CustomCog(commands.Cog):
     @commands.command(name='version')
     async def _version(self, ctx):
         print('Merch requested')
-        await ctx.send("Running 0.0.6.0")
+        await ctx.send("Running 0.0.7.0")
         pass
 
     @commands.command(name='streamlist')
@@ -193,13 +181,11 @@ class CustomCog(commands.Cog):
 P. O. Box 4182
 Cheyenne, WY 82003""")
         pass
-
-    @commands.command(name='revivalwiki')
-    async def _revivalwiki(self, ctx):
-        if ctx.author.id == 222766150767869952:
-            print('Wiki command ran...')
-            await ctx.send("The wiki for Revival RP: <https://revival-rp.fandom.com/>")
-            pass
+        
+    @commands.command(name='secretlab')
+    async def _secretlab(self, ctx):
+        print('Secret Lab command ran...')
+        await ctx.send("TrooperKallam is sitting in a Secretlab Titan gaming chair. You can get your own and game in style and comfort by clicking this link! <https://bit.ly/3r0wV8v>")
         pass
     
     @commands.command(name='rcore')

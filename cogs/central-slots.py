@@ -346,7 +346,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_green(),
                     description="""RESULT:
-        <:bar:760353094856081418> **|** <:bar:760353094856081418> **|** <:bar:760353094856081418>
+        <:bar:760572063139758090> **|** <:bar:760572063139758090> **|** <:bar:760572063139758090>
     \u200b""")
                     embed.add_field(name='**WIN**', value=f'{money *4} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money + {money *4} WHERE user_id = {ctx.author.id}")
@@ -357,7 +357,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :bell: **|** :bell: **|** <:bar:760353094856081418>
+        :bell: **|** :bell: **|** <:bar:760572063139758090>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -368,7 +368,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :bell: **|** <:bar:760353094856081418> **|** <:bar:760353094856081418>
+        :bell: **|** <:bar:760572063139758090> **|** <:bar:760572063139758090>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -379,7 +379,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :bell: **|** <:bar:760353094856081418> **|** :bell:
+        :bell: **|** <:bar:760572063139758090> **|** :bell:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -390,7 +390,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:bar:760353094856081418> **|** <:bar:760353094856081418> **|** :bell:
+        <:bar:760572063139758090> **|** <:bar:760572063139758090> **|** :bell:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -401,7 +401,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:bar:760353094856081418> **|** :bell: **|** :bell:
+        <:bar:760572063139758090> **|** :bell: **|** :bell:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -412,7 +412,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:bar:760353094856081418> **|** :bell: **|** <:bar:760353094856081418>
+        <:bar:760572063139758090> **|** :bell: **|** <:bar:760572063139758090>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -424,10 +424,10 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_green(),
                     description="""RESULT:
-        <:2bar:760353132537577533> **|** <:2bar:760353132537577533> **|** <:2bar:760353132537577533>
+        <:2bar:760572097306689576> **|** <:2bar:760572097306689576> **|** <:2bar:760572097306689576>
         \u200b""")
-                    embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
-                    await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
+                    embed.add_field(name='**WIN**', value=f'{money *8} <:kbucks:816469503365480498>K-Bucks!', inline=True)
+                    await db.execute(f"UPDATE economy SET money = money + {money *8} WHERE user_id = {ctx.author.id}")
                     await asyncio.sleep(0.5)
                     await ctx.send("WIN x4!")
                     print('RESULT: 2Bar, 2Bar, 2Bar')
@@ -436,7 +436,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :bell: **|** :bell: **|** <:2bar:760353132537577533>
+        :bell: **|** :bell: **|** <:2bar:760572097306689576>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -447,7 +447,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :bell: **|** <:2bar:760353132537577533> **|** <:2bar:760353132537577533>
+        :bell: **|** <:2bar:760572097306689576> **|** <:2bar:760572097306689576>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -458,7 +458,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :bell: **|** <:2bar:760353132537577533> **|** :bell:
+        :bell: **|** <:2bar:760572097306689576> **|** :bell:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -469,7 +469,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:2bar:760353132537577533> **|** <:2bar:760353132537577533> **|** :bell:
+        <:2bar:760572097306689576> **|** <:2bar:760572097306689576> **|** :bell:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -480,7 +480,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:2bar:760353132537577533> **|** :bell: **|** :bell:
+        <:2bar:760572097306689576> **|** :bell: **|** :bell:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -491,7 +491,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:2bar:760353132537577533> **|** :bell: **|** <:2bar:760353132537577533>
+        <:2bar:760572097306689576> **|** :bell: **|** <:2bar:760572097306689576>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -503,7 +503,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_green(),
                     description="""RESULT:
-        <:3bar:760353189324652556> **|** <:3bar:760353189324652556> **|** <:3bar:760353189324652556>
+        <:3bar:760572136384364585> **|** <:3bar:760572136384364585> **|** <:3bar:760572136384364585>
     \u200b""")
                     embed.add_field(name='**WIN**', value=f'{money *16} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money + {money *16} WHERE user_id = {ctx.author.id}")
@@ -514,7 +514,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :bell: **|** :bell: **|** <:3bar:760353189324652556>
+        :bell: **|** :bell: **|** <:3bar:760572136384364585>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -525,7 +525,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :bell: **|** <:3bar:760353189324652556> **|** <:3bar:760353189324652556>
+        :bell: **|** <:3bar:760572136384364585> **|** <:3bar:760572136384364585>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -536,7 +536,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :bell: **|** <:3bar:760353189324652556> **|** :bell:
+        :bell: **|** <:3bar:760572136384364585> **|** :bell:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -547,7 +547,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:3bar:760353189324652556> **|** <:3bar:760353189324652556> **|** :bell:
+        <:3bar:760572136384364585> **|** <:3bar:760572136384364585> **|** :bell:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -558,7 +558,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:3bar:760353189324652556> **|** :bell: **|** :bell:
+        <:3bar:760572136384364585> **|** :bell: **|** :bell:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -569,7 +569,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:3bar:760353189324652556> **|** :bell: **|** <:3bar:760353189324652556>
+        <:3bar:760572136384364585> **|** :bell: **|** <:3bar:760572136384364585>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -782,7 +782,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :cherries: **|** :cherries: **|** <:bar:760353094856081418>
+        :cherries: **|** :cherries: **|** <:bar:760572063139758090>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -793,7 +793,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :cherries: **|** <:bar:760353094856081418> **|** <:bar:760353094856081418>
+        :cherries: **|** <:bar:760572063139758090> **|** <:bar:760572063139758090>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -804,7 +804,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :cherries: **|** <:bar:760353094856081418> **|** :cherries:
+        :cherries: **|** <:bar:760572063139758090> **|** :cherries:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -815,7 +815,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:bar:760353094856081418> **|** <:bar:760353094856081418> **|** :cherries:
+        <:bar:760572063139758090> **|** <:bar:760572063139758090> **|** :cherries:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -826,7 +826,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:bar:760353094856081418> **|** :cherries: **|** :cherries:
+        <:bar:760572063139758090> **|** :cherries: **|** :cherries:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -837,7 +837,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:bar:760353094856081418> **|** :cherries: **|** <:bar:760353094856081418>
+        <:bar:760572063139758090> **|** :cherries: **|** <:bar:760572063139758090>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -849,7 +849,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :cherries: **|** :cherries: **|** <:2bar:760353132537577533>
+        :cherries: **|** :cherries: **|** <:2bar:760572097306689576>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -860,7 +860,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :cherries: **|** <:2bar:760353132537577533> **|** <:2bar:760353132537577533>
+        :cherries: **|** <:2bar:760572097306689576> **|** <:2bar:760572097306689576>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -871,7 +871,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :cherries: **|** <:2bar:760353132537577533> **|** :cherries:
+        :cherries: **|** <:2bar:760572097306689576> **|** :cherries:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -882,7 +882,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:2bar:760353132537577533> **|** <:2bar:760353132537577533> **|** :cherries:
+        <:2bar:760572097306689576> **|** <:2bar:760572097306689576> **|** :cherries:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -893,7 +893,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:2bar:760353132537577533> **|** :cherries: **|** :cherries:
+        <:2bar:760572097306689576> **|** :cherries: **|** :cherries:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -904,7 +904,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:2bar:760353132537577533> **|** :cherries: **|** <:2bar:760353132537577533>
+        <:2bar:760572097306689576> **|** :cherries: **|** <:2bar:760572097306689576>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -916,7 +916,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :cherries: **|** :cherries: **|** <:3bar:760353189324652556>
+        :cherries: **|** :cherries: **|** <:3bar:760572136384364585>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -927,7 +927,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :cherries: **|** <:3bar:760353189324652556> **|** <:3bar:760353189324652556>
+        :cherries: **|** <:3bar:760572136384364585> **|** <:3bar:760572136384364585>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -938,7 +938,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :cherries: **|** <:3bar:760353189324652556> **|** :cherries:
+        :cherries: **|** <:3bar:760572136384364585> **|** :cherries:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -949,7 +949,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:3bar:760353189324652556> **|** <:3bar:760353189324652556> **|** :cherries:
+        <:3bar:760572136384364585> **|** <:3bar:760572136384364585> **|** :cherries:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -960,7 +960,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:3bar:760353189324652556> **|** :cherries: **|** :cherries:
+        <:3bar:760572136384364585> **|** :cherries: **|** :cherries:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -971,7 +971,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:3bar:760353189324652556> **|** :cherries: **|** <:3bar:760353189324652556>
+        <:3bar:760572136384364585> **|** :cherries: **|** <:3bar:760572136384364585>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1117,7 +1117,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :grapes: **|** :grapes: **|** <:bar:760353094856081418>
+        :grapes: **|** :grapes: **|** <:bar:760572063139758090>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1128,7 +1128,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :grapes: **|** <:bar:760353094856081418> **|** <:bar:760353094856081418>
+        :grapes: **|** <:bar:760572063139758090> **|** <:bar:760572063139758090>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1139,7 +1139,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :grapes: **|** <:bar:760353094856081418> **|** :grapes:
+        :grapes: **|** <:bar:760572063139758090> **|** :grapes:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1150,7 +1150,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:bar:760353094856081418> **|** <:bar:760353094856081418> **|** :grapes:
+        <:bar:760572063139758090> **|** <:bar:760572063139758090> **|** :grapes:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1161,7 +1161,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:bar:760353094856081418> **|** :cherries: **|** :cherries:
+        <:bar:760572063139758090> **|** :cherries: **|** :cherries:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1172,7 +1172,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:bar:760353094856081418> **|** :grapes: **|** <:bar:760353094856081418>
+        <:bar:760572063139758090> **|** :grapes: **|** <:bar:760572063139758090>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1184,7 +1184,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :grapes: **|** :grapes: **|** <:2bar:760353132537577533>
+        :grapes: **|** :grapes: **|** <:2bar:760572097306689576>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1195,7 +1195,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :grapes: **|** <:2bar:760353132537577533> **|** <:2bar:760353132537577533>
+        :grapes: **|** <:2bar:760572097306689576> **|** <:2bar:760572097306689576>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1206,7 +1206,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :grapes: **|** <:2bar:760353132537577533> **|** :grapes:
+        :grapes: **|** <:2bar:760572097306689576> **|** :grapes:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1217,7 +1217,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:2bar:760353132537577533> **|** <:2bar:760353132537577533> **|** :grapes:
+        <:2bar:760572097306689576> **|** <:2bar:760572097306689576> **|** :grapes:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1228,7 +1228,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:2bar:760353132537577533> **|** :grapes: **|** :grapes:
+        <:2bar:760572097306689576> **|** :grapes: **|** :grapes:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1239,7 +1239,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:2bar:760353132537577533> **|** :grapes: **|** <:2bar:760353132537577533>
+        <:2bar:760572097306689576> **|** :grapes: **|** <:2bar:760572097306689576>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1251,7 +1251,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :grapes: **|** :grapes: **|** <:3bar:760353189324652556>
+        :grapes: **|** :grapes: **|** <:3bar:760572136384364585>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1262,7 +1262,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :grapes: **|** <:3bar:760353189324652556> **|** <:3bar:760353189324652556>
+        :grapes: **|** <:3bar:760572136384364585> **|** <:3bar:760572136384364585>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1273,7 +1273,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :grapes: **|** <:3bar:760353189324652556> **|** :grapes:
+        :grapes: **|** <:3bar:760572136384364585> **|** :grapes:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1284,7 +1284,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:3bar:760353189324652556> **|** <:3bar:760353189324652556> **|** :grapes:
+        <:3bar:760572136384364585> **|** <:3bar:760572136384364585> **|** :grapes:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1295,7 +1295,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:3bar:760353189324652556> **|** :grapes: **|** :grapes:
+        <:3bar:760572136384364585> **|** :grapes: **|** :grapes:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1306,7 +1306,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:3bar:760353189324652556> **|** :grapes: **|** <:3bar:760353189324652556>
+        <:3bar:760572136384364585> **|** :grapes: **|** <:3bar:760572136384364585>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1385,7 +1385,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :seven: **|** :seven: **|** <:bar:760353094856081418>
+        :seven: **|** :seven: **|** <:bar:760572063139758090>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1396,7 +1396,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :seven: **|** <:bar:760353094856081418> **|** <:bar:760353094856081418>
+        :seven: **|** <:bar:760572063139758090> **|** <:bar:760572063139758090>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1407,7 +1407,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :seven: **|** <:bar:760353094856081418> **|** :seven:
+        :seven: **|** <:bar:760572063139758090> **|** :seven:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1418,7 +1418,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:bar:760353094856081418> **|** <:bar:760353094856081418> **|** :seven:
+        <:bar:760572063139758090> **|** <:bar:760572063139758090> **|** :seven:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1429,7 +1429,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:bar:760353094856081418> **|** :seven: **|** :seven:
+        <:bar:760572063139758090> **|** :seven: **|** :seven:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1440,7 +1440,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:bar:760353094856081418> **|** :seven: **|** <:bar:760353094856081418>
+        <:bar:760572063139758090> **|** :seven: **|** <:bar:760572063139758090>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1452,7 +1452,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :seven: **|** :seven: **|** <:2bar:760353132537577533>
+        :seven: **|** :seven: **|** <:2bar:760572097306689576>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1463,7 +1463,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :seven: **|** <:2bar:760353132537577533> **|** <:2bar:760353132537577533>
+        :seven: **|** <:2bar:760572097306689576> **|** <:2bar:760572097306689576>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1474,7 +1474,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :seven: **|** <:2bar:760353132537577533> **|** :seven:
+        :seven: **|** <:2bar:760572097306689576> **|** :seven:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1485,7 +1485,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:2bar:760353132537577533> **|** <:2bar:760353132537577533> **|** :seven:
+        <:2bar:760572097306689576> **|** <:2bar:760572097306689576> **|** :seven:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1496,7 +1496,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:2bar:760353132537577533> **|** :seven: **|** :seven:
+        <:2bar:760572097306689576> **|** :seven: **|** :seven:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1507,7 +1507,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:2bar:760353132537577533> **|** :seven: **|** <:2bar:760353132537577533>
+        <:2bar:760572097306689576> **|** :seven: **|** <:2bar:760572097306689576>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1519,7 +1519,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :seven: **|** :seven: **|** <:3bar:760353189324652556>
+        :seven: **|** :seven: **|** <:3bar:760572136384364585>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1530,7 +1530,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :seven: **|** <:3bar:760353189324652556> **|** <:3bar:760353189324652556>
+        :seven: **|** <:3bar:760572136384364585> **|** <:3bar:760572136384364585>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1541,7 +1541,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :seven: **|** <:3bar:760353189324652556> **|** :seven:
+        :seven: **|** <:3bar:760572136384364585> **|** :seven:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1552,7 +1552,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:3bar:760353189324652556> **|** <:3bar:760353189324652556> **|** :seven:
+        <:3bar:760572136384364585> **|** <:3bar:760572136384364585> **|** :seven:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1563,7 +1563,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:3bar:760353189324652556> **|** :seven: **|** :seven:
+        <:3bar:760572136384364585> **|** :seven: **|** :seven:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1574,7 +1574,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:3bar:760353189324652556> **|** :seven: **|** <:3bar:760353189324652556>
+        <:3bar:760572136384364585> **|** :seven: **|** <:3bar:760572136384364585>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1586,7 +1586,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :four_leaf_clover: **|** :four_leaf_clover: **|** <:bar:760353094856081418>
+        :four_leaf_clover: **|** :four_leaf_clover: **|** <:bar:760572063139758090>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1597,7 +1597,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :four_leaf_clover: **|** <:bar:760353094856081418> **|** <:bar:760353094856081418>
+        :four_leaf_clover: **|** <:bar:760572063139758090> **|** <:bar:760572063139758090>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1608,7 +1608,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :four_leaf_clover: **|** <:bar:760353094856081418> **|** :four_leaf_clover:
+        :four_leaf_clover: **|** <:bar:760572063139758090> **|** :four_leaf_clover:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1619,7 +1619,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:bar:760353094856081418> **|** <:bar:760353094856081418> **|** :four_leaf_clover:
+        <:bar:760572063139758090> **|** <:bar:760572063139758090> **|** :four_leaf_clover:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1630,7 +1630,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:bar:760353094856081418> **|** :four_leaf_clover: **|** :four_leaf_clover:
+        <:bar:760572063139758090> **|** :four_leaf_clover: **|** :four_leaf_clover:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1641,7 +1641,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:bar:760353094856081418> **|** :four_leaf_clover: **|** <:bar:760353094856081418>
+        <:bar:760572063139758090> **|** :four_leaf_clover: **|** <:bar:760572063139758090>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1653,7 +1653,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :four_leaf_clover: **|** :four_leaf_clover: **|** <:2bar:760353132537577533>
+        :four_leaf_clover: **|** :four_leaf_clover: **|** <:2bar:760572097306689576>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1664,7 +1664,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :four_leaf_clover: **|** <:2bar:760353132537577533> **|** <:2bar:760353132537577533>
+        :four_leaf_clover: **|** <:2bar:760572097306689576> **|** <:2bar:760572097306689576>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1675,7 +1675,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :four_leaf_clover: **|** <:2bar:760353132537577533> **|** :four_leaf_clover:
+        :four_leaf_clover: **|** <:2bar:760572097306689576> **|** :four_leaf_clover:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1686,7 +1686,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:2bar:760353132537577533> **|** <:2bar:760353132537577533> **|** :four_leaf_clover:
+        <:2bar:760572097306689576> **|** <:2bar:760572097306689576> **|** :four_leaf_clover:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1697,7 +1697,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:2bar:760353132537577533> **|** :four_leaf_clover: **|** :four_leaf_clover:
+        <:2bar:760572097306689576> **|** :four_leaf_clover: **|** :four_leaf_clover:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1708,7 +1708,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:2bar:760353132537577533> **|** :four_leaf_clover: **|** <:2bar:760353132537577533>
+        <:2bar:760572097306689576> **|** :four_leaf_clover: **|** <:2bar:760572097306689576>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1720,7 +1720,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :four_leaf_clover: **|** :four_leaf_clover: **|** <:3bar:760353189324652556>
+        :four_leaf_clover: **|** :four_leaf_clover: **|** <:3bar:760572136384364585>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1731,7 +1731,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :four_leaf_clover: **|** <:3bar:760353189324652556> **|** <:3bar:760353189324652556>
+        :four_leaf_clover: **|** <:3bar:760572136384364585> **|** <:3bar:760572136384364585>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1742,7 +1742,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        :four_leaf_clover: **|** <:3bar:760353189324652556> **|** :four_leaf_clover:
+        :four_leaf_clover: **|** <:3bar:760572136384364585> **|** :four_leaf_clover:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1753,7 +1753,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:3bar:760353189324652556> **|** <:3bar:760353189324652556> **|** :four_leaf_clover:
+        <:3bar:760572136384364585> **|** <:3bar:760572136384364585> **|** :four_leaf_clover:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1764,7 +1764,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:3bar:760353189324652556> **|** :four_leaf_clover: **|** :four_leaf_clover:
+        <:3bar:760572136384364585> **|** :four_leaf_clover: **|** :four_leaf_clover:
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1775,7 +1775,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:3bar:760353189324652556> **|** :four_leaf_clover: **|** <:3bar:760353189324652556>
+        <:3bar:760572136384364585> **|** :four_leaf_clover: **|** <:3bar:760572136384364585>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1787,7 +1787,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:bar:760353094856081418> **|** <:bar:760353094856081418> **|** <:2bar:760353132537577533>
+        <:bar:760572063139758090> **|** <:bar:760572063139758090> **|** <:2bar:760572097306689576>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1798,7 +1798,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:bar:760353094856081418> **|** <:2bar:760353132537577533> **|** <:2bar:760353132537577533>
+        <:bar:760572063139758090> **|** <:2bar:760572097306689576> **|** <:2bar:760572097306689576>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1809,7 +1809,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:bar:760353094856081418> **|** <:2bar:760353132537577533> **|** <:bar:760353094856081418>
+        <:bar:760572063139758090> **|** <:2bar:760572097306689576> **|** <:bar:760572063139758090>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1820,7 +1820,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:2bar:760353132537577533> **|** <:2bar:760353132537577533> **|** <:bar:760353094856081418>
+        <:2bar:760572097306689576> **|** <:2bar:760572097306689576> **|** <:bar:760572063139758090>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1831,7 +1831,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:2bar:760353132537577533> **|** <:bar:760353094856081418> **|** <:bar:760353094856081418>
+        <:2bar:760572097306689576> **|** <:bar:760572063139758090> **|** <:bar:760572063139758090>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1842,7 +1842,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:2bar:760353132537577533> **|** <:bar:760353094856081418> **|** <:2bar:760353132537577533>
+        <:2bar:760572097306689576> **|** <:bar:760572063139758090> **|** <:2bar:760572097306689576>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1854,7 +1854,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:bar:760353094856081418> **|** <:bar:760353094856081418> **|** <:3bar:760353189324652556>
+        <:bar:760572063139758090> **|** <:bar:760572063139758090> **|** <:3bar:760572136384364585>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1865,7 +1865,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:bar:760353094856081418> **|** <:3bar:760353189324652556> **|** <:3bar:760353189324652556>
+        <:bar:760572063139758090> **|** <:3bar:760572136384364585> **|** <:3bar:760572136384364585>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1876,7 +1876,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:bar:760353094856081418> **|** <:3bar:760353189324652556> **|** <:bar:760353094856081418>
+        <:bar:760572063139758090> **|** <:3bar:760572136384364585> **|** <:bar:760572063139758090>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1887,7 +1887,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:3bar:760353189324652556> **|** <:3bar:760353189324652556> **|** <:bar:760353094856081418>
+        <:3bar:760572136384364585> **|** <:3bar:760572136384364585> **|** <:bar:760572063139758090>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1898,7 +1898,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:3bar:760353189324652556> **|** <:bar:760353094856081418> **|** <:bar:760353094856081418>
+        <:3bar:760572136384364585> **|** <:bar:760572063139758090> **|** <:bar:760572063139758090>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1909,7 +1909,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:3bar:760353189324652556> **|** <:bar:760353094856081418> **|** <:3bar:760353189324652556>
+        <:3bar:760572136384364585> **|** <:bar:760572063139758090> **|** <:3bar:760572136384364585>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1921,7 +1921,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:2bar:760353132537577533> **|** <:2bar:760353132537577533> **|** <:3bar:760353189324652556>
+        <:2bar:760572097306689576> **|** <:2bar:760572097306689576> **|** <:3bar:760572136384364585>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1932,7 +1932,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:2bar:760353132537577533> **|** <:3bar:760353189324652556> **|** <:3bar:760353189324652556>
+        <:2bar:760572097306689576> **|** <:3bar:760572136384364585> **|** <:3bar:760572136384364585>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1943,7 +1943,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:2bar:760353132537577533> **|** <:3bar:760353189324652556> **|** <:2bar:760353132537577533>
+        <:2bar:760572097306689576> **|** <:3bar:760572136384364585> **|** <:2bar:760572097306689576>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1954,7 +1954,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:3bar:760353189324652556> **|** <:3bar:760353189324652556> **|** <:2bar:760353132537577533>
+        <:3bar:760572136384364585> **|** <:3bar:760572136384364585> **|** <:2bar:760572097306689576>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1965,7 +1965,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:3bar:760353189324652556> **|** <:2bar:760353132537577533> **|** <:2bar:760353132537577533>
+        <:3bar:760572136384364585> **|** <:2bar:760572097306689576> **|** <:2bar:760572097306689576>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
@@ -1976,7 +1976,7 @@ class SlotsCog(commands.Cog, name="Slot Machine Cog"):
                     type='rich',
                     colour=discord.Color.dark_red(),
                     description="""RESULT:
-        <:3bar:760353189324652556> **|** <:2bar:760353132537577533> **|** <:3bar:760353189324652556>
+        <:3bar:760572136384364585> **|** <:2bar:760572097306689576> **|** <:3bar:760572136384364585>
         \u200b""")
                     embed.add_field(name='**LOSE**', value=f'{money} <:kbucks:816469503365480498>K-Bucks!', inline=True)
                     await db.execute(f"UPDATE economy SET money = money - {money} WHERE user_id = {ctx.author.id}")
