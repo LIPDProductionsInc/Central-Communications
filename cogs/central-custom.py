@@ -263,7 +263,7 @@ Cheyenne, WY 82003""")
     
     @commands.command(name='time')
     async def _time(self, ctx):
-        time = datetime.datetime.utcnow() - datetime.timedelta(hours=7)
+        time = datetime.datetime.utcnow() - datetime.timedelta(hours=6)
         await ctx.send(f"Kallam\'s current time: **{time.strftime('%I:%M %p')}**")
         pass
     
