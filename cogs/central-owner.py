@@ -75,6 +75,23 @@ class OwnerCog(commands.Cog, name="Owner Commands"):
             ''')
         await ctx.send(embed=embed)
         pass
+
+    @commands.command(name='edit')
+    @commands.is_owner()
+    async def _edit(self, ctx, id):
+        message = await ctx.channel.fetch_message(id)
+        embed = message.embeds[0].description = '''
+:video_camera: to get the <@&731397963259052133> role
+:microphone: to get the <@&732118149285150800> role
+:tada: to get the <@&732868630710190140> role
+:video_game: to get the <@&786174523405107200> role
+:movie_camera: to get the <@&802013687333781534> role
+:grey_question: to get the <@&809068173868400720> role
+:question: to get the <@&948495979940823070> role
+:robot: to get the <@&1015680899511242832> role
+            '''
+        await message.edit(embed=embed)
+        pass
         
     @commands.command(name='revival')
     @commands.has_any_role(731391948102959104, 731392197437685772, 731395356419424297)
