@@ -1,3 +1,4 @@
+from turtle import color
 import discord
 import asyncio
 import datetime
@@ -92,26 +93,6 @@ class OwnerCog(commands.Cog, name="Owner Commands"):
             '''
         await message.edit(embed=embed)
         pass
-        
-    @commands.command(name='revival')
-    @commands.has_any_role(731391948102959104, 731392197437685772, 731395356419424297)
-    async def _revival(self, ctx, member: discord.Member = None):
-        if ctx.channel.category_id == 958548040724123710:
-            embed = discord.Embed(
-                type='rich',
-                colour=discord.Color.dark_blue(),
-                description='''
-**Hey!** We think you have our server mistaken. We do not provide support, help, or advice for the Revival FiveM server. You need to open a <#774375679130992700> in the [Revival Discord](https://discord.gg/revivalrp). If you are unable to access the Discord server, you must try the [fourms](http://revivalrp.com). We can't help you otherwise. Sorry :(
-                ''')
-            embed.set_footer(text="Developed by LIPD Productions Inc.#1205", icon_url=str(ctx.guild.icon_url))
-            embed.timestamp=datetime.datetime.utcnow()
-            if member == None:
-                await ctx.send(embed=embed)
-            else:
-                await ctx.send(member.mention,embed=embed)
-            pass
-        pass
-    pass
     
     @commands.command(name='howto', aliases=['how-to'])
     @commands.has_any_role(731391948102959104, 731392197437685772, 731395356419424297)
@@ -155,6 +136,36 @@ class OwnerCog(commands.Cog, name="Owner Commands"):
                     await ctx.send(member.mention,embed=embed)
             else:
                 await ctx.send(':x: | Invalid guide type')
+
+    @commands.command(name='rules')
+    @commands.is_owner()
+    async def _rules(self, ctx):
+        embed = discord.Embed(
+            title="**Welcome to Kallam's Troop**",
+            type='rich',
+            colour = discord.Colour.dark_blue(),
+            description='''
+**RULES:**
+`1.`Discord Terms of Service https://discord.com/terms and the Discord Community Guidelines https://discord.com/guidelines MUST be followed at all times.
+`2.` Please be respectful to everyone here. **No hateful messages to members**
+`3.` Leaking personal information of anyone is **not** allowed
+`4.` Spamming and/or mic-spamming is **not** allowed
+`5.` NSFW or inappropriate content is **not** allowed. This can be pornographic, gore, highly sensitive material, etc.
+`6.` Advertising your material (Discord server/Twitch Channel/RP Community) is **not** allowed.  
+`7.` Do **not** post malicious links, files, or anything of that sort
+`8.` Sharing discord direct messages (DMS) in order to provoke them and make them look bad is **not** tolerated
+`9.` Racism/Homophobia is **not** tolerated in this discord
+`10.` This is an English speaking discord
+`11.` Targeting someone in order to provoke by any means is forbidden
+`12.` Impersonation of another person or bot is forbidden
+
+**Common Sense is required in this Discord server. If you are questioning whether or not you should post something, it's better to not to or open a <#944466196663775262>**
+
+**At the end of the day mods have final say on decisions made in the discord**
+            **Rules are subject to change at any point**
+**By remaining in the discord, you are acknowledging and agreeing to these rules** 
+            ''')
+        await ctx.send(embed=embed)
 
 def setup(bot):
     bot.add_cog(OwnerCog(bot))

@@ -2,11 +2,13 @@ import discord
 import asyncio
 import datetime
 import logging
+import os
 import sys, traceback
 
 from discord.ext import commands
 from discord.ext.commands import Bot
-from pymongo import MongoClient
+from dotenv import load_dotenv
+load_dotenv()
 
 def get_prefix(bot, message):
     """A callable Prefix for our bot. This could be edited to allow per server prefixes."""
@@ -46,39 +48,9 @@ admin_help = """
 """
 
 help_message = """
-**cc!revivalhelp**: Get the list of commands related to Revival and FiveM
-
 **cc!discordhelp**: Help related to Discord stuff, syncing, etc.
 
 **cc!generalhelp**: List of commands that can be used
-"""
-
-help_revival = """
-**cc!sound**: The sounds Kallam uses
-
-**cc!graphics**: The visiual pack Kallam uses
-
-**cc!map**: The map mod Kallam uses
-
-**cc!saltychat**: SaltyChat is the VoIP used by Revival
-
-**cc!streamlist**: Get a list of current Revival RP streamers that automatically updates from HasRoot ||(Managed by LIPD Productions Inc.)||
-
-**cc!rcore**: rCore, parterned with Kallam and Revival
-
-**cc!sasp**: SASP Applications
-
-**cc!safr**: SAFR Applications
-
-**cc!sadoj**: SADoJ Applications
-
-**cc!sadot**: SADOT Applications
-
-**cc!rosa**: RoSA Applications
-
-**cc!sarcc**: SARCC Applications
-
-NEW COMMAND COMING SOON
 """
 
 help_discord = """
@@ -126,7 +98,7 @@ async def on_invite_create(invite):
 
 @bot.event
 async def on_ready():
-    print(f'Successfully logged in as {bot.user}, Running Verison 0.0.7.0'.format(bot))
+    print(f'Successfully logged in as {bot.user}, Running Verison 0.0.8.0'.format(bot))
     await bot.change_presence(activity=activity, status=status)
     #bot.load_extension('cogs.central-music')
     print('Cogs loaded:')
@@ -201,19 +173,6 @@ async def help(ctx):
         type='rich',
         colour=discord.Color(0xFF0000),
         description=help_message
-       )
-    embed.set_footer(text="Developed by LIPD Producctions Inc.#1205")
-    await ctx.send(embed=embed)
-    pass
-
-@bot.command(name='revivalhelp')
-async def _revivalhelp(ctx):
-    print('Revival Help command ran...')
-    embed=discord.Embed(
-        title='REVIVAL/FIVEM COMMANDS',
-        type='rich',
-        colour=discord.Color(0x0000FF),
-        description=help_revival
        )
     embed.set_footer(text="Developed by LIPD Producctions Inc.#1205")
     await ctx.send(embed=embed)
