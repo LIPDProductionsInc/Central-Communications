@@ -1,3 +1,4 @@
+import datetime
 import discord
 import math
 import os
@@ -52,7 +53,21 @@ class CommandErrorHandler(commands.Cog, name="Command Error Handler"):
             await ctx.send(':x: | Argument needed')
             
         if isinstance(error, commands.CheckFailure):
-            await ctx.send(':x: | A critical error has occured. ||Code 54||')
+            channel = ctx.bot.get_channel(os.getenv('ErrorLogChannel'))
+            await ctx.send(':x: | Error not captured in the handler. Log sent to the bot owner.')
+            embed = discord.Embed(
+                    type='rich',
+                    colour = discord.Colour.red()
+                )
+            embed.set_author(name='New Error', icon_url=str(ctx.bot.user.avatar_url))
+            embed.add_field(name='Uncaptured Error', value=f'{error}', inline=False)
+            embed.add_field(name='Command Ran', value=f'{ctx.command}', inline=False)
+            embed.add_field(name='Guild', value=f'{ctx.guild}', inline=True)
+            embed.add_field(name='Channel', value=f'{ctx.channel}', inline=True)
+            embed.add_field(name='Message', value=f'{ctx.message.content}', inline=True)
+            embed.set_footer(text=f'User ID: {ctx.author.id}')
+            embed.timestamp = datetime.datetime.utcnow()
+            await channel.send(embed=embed)
             
         if isinstance(error, commands.ExtensionAlreadyLoaded):
             await ctx.send(':x: | <@!222766150767869952> That cog is already loaded')
@@ -98,16 +113,58 @@ class CommandErrorHandler(commands.Cog, name="Command Error Handler"):
             await ctx.send(':x: | Cannot divide by zero!')
             
         if isinstance(error, AttributeError):
+            channel = ctx.bot.get_channel(os.getenv('ErrorLogChannel'))
             await ctx.send(f':x: | AttributeError: {error}')
+            embed = discord.Embed(
+                    type='rich',
+                    colour = discord.Colour.red()
+                )
+            embed.set_author(name='New Error', icon_url=str(ctx.bot.user.avatar_url))
+            embed.add_field(name='Attribute Error', value=f'{error}', inline=False)
+            embed.add_field(name='Command Ran', value=f'{ctx.command}', inline=False)
+            embed.add_field(name='Guild', value=f'{ctx.guild}', inline=True)
+            embed.add_field(name='Channel', value=f'{ctx.channel}', inline=True)
+            embed.add_field(name='Message', value=f'{ctx.message.content}', inline=True)
+            embed.set_footer(text=f'User ID: {ctx.author.id}')
+            embed.timestamp = datetime.datetime.utcnow()
+            await channel.send(embed=embed)
             
         if isinstance(error, NameError):
+            channel = ctx.bot.get_channel(os.getenv('ErrorLogChannel'))
             await ctx.send(f':x: | NameError: {error}')
+            embed = discord.Embed(
+                    type='rich',
+                    colour = discord.Colour.red()
+                )
+            embed.set_author(name='New Error', icon_url=str(ctx.bot.user.avatar_url))
+            embed.add_field(name='Name Error', value=f'{error}', inline=False)
+            embed.add_field(name='Command Ran', value=f'{ctx.command}', inline=False)
+            embed.add_field(name='Guild', value=f'{ctx.guild}', inline=True)
+            embed.add_field(name='Channel', value=f'{ctx.channel}', inline=True)
+            embed.add_field(name='Message', value=f'{ctx.message.content}', inline=True)
+            embed.set_footer(text=f'User ID: {ctx.author.id}')
+            embed.timestamp = datetime.datetime.utcnow()
+            await channel.send(embed=embed)
         
         if isinstance(error, ValueError):
             await ctx.send(f':x: | Invalid amount of K-Bucks given')
         
         if isinstance(error, SyntaxError):
+            channel = ctx.bot.get_channel(os.getenv('ErrorLogChannel'))
             await ctx.send(f':x: | SyntaxError: {error}')
+            embed = discord.Embed(
+                    type='rich',
+                    colour = discord.Colour.red()
+                )
+            embed.set_author(name='New Error', icon_url=str(ctx.bot.user.avatar_url))
+            embed.add_field(name='Syntax Error', value=f'{error}', inline=False)
+            embed.add_field(name='Command Ran', value=f'{ctx.command}', inline=False)
+            embed.add_field(name='Guild', value=f'{ctx.guild}', inline=True)
+            embed.add_field(name='Channel', value=f'{ctx.channel}', inline=True)
+            embed.add_field(name='Message', value=f'{ctx.message.content}', inline=True)
+            embed.set_footer(text=f'User ID: {ctx.author.id}')
+            embed.timestamp = datetime.datetime.utcnow()
+            await channel.send(embed=embed)
             
         if isinstance(error, KeyError):
             await ctx.send(f':x: | KeyError: {error} is not found')
@@ -116,7 +173,21 @@ class CommandErrorHandler(commands.Cog, name="Command Error Handler"):
             if ctx.command.qualified_name == 'bal' or ctx.command.qualified_name == 'balance':
                 await ctx.send(':x: | Not found in database. Please register with `cc!register`')
             else:
+                channel = ctx.bot.get_channel(os.getenv('ErrorLogChannel'))
                 await ctx.send(f':x: | TypeError: {error}')
+                embed = discord.Embed(
+                    type='rich',
+                    colour = discord.Colour.red()
+                )
+                embed.set_author(name='New Error', icon_url=str(ctx.bot.user.avatar_url))
+                embed.add_field(name='Type Error', value=f'{error}', inline=False)
+                embed.add_field(name='Command Ran', value=f'{ctx.command}', inline=False)
+                embed.add_field(name='Guild', value=f'{ctx.guild}', inline=True)
+                embed.add_field(name='Channel', value=f'{ctx.channel}', inline=True)
+                embed.add_field(name='Message', value=f'{ctx.message.content}', inline=True)
+                embed.set_footer(text=f'User ID: {ctx.author.id}')
+                embed.timestamp = datetime.datetime.utcnow()
+                await channel.send(embed=embed)
             
         if isinstance(error, discord.HTTPException):
             await ctx.send(f':x: | HTTPException: {error.status} (error code: {error.code}): {error.text}')
@@ -125,7 +196,21 @@ class CommandErrorHandler(commands.Cog, name="Command Error Handler"):
             await ctx.send(f':x: | You are already registered. If this is in error, please open a ticket')
             
         if isinstance(error, sqlite3.OperationalError):
+            channel = ctx.bot.get_channel(os.getenv('ErrorLogChannel'))
             await ctx.send(f':x: | OperationalError: {error}')
+            embed = discord.Embed(
+                    type='rich',
+                    colour = discord.Colour.red()
+                )
+            embed.set_author(name='New Error', icon_url=str(ctx.bot.user.avatar_url))
+            embed.add_field(name='SQLite3 Operational Error', value=f'{error}', inline=False)
+            embed.add_field(name='Command Ran', value=f'{ctx.command}', inline=False)
+            embed.add_field(name='Guild', value=f'{ctx.guild}', inline=True)
+            embed.add_field(name='Channel', value=f'{ctx.channel}', inline=True)
+            embed.add_field(name='Message', value=f'{ctx.message.content}', inline=True)
+            embed.set_footer(text=f'User ID: {ctx.author.id}')
+            embed.timestamp = datetime.datetime.utcnow()
+            await channel.send(embed=embed)
 
         elif isinstance(error, commands.NoPrivateMessage):
             try:
