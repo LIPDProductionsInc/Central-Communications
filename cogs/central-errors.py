@@ -1,11 +1,13 @@
 import discord
 import math
+import os
 import traceback
 import sqlite3
 import sys
 
 from discord.ext import commands
-
+from dotenv import load_dotenv
+load_dotenv()
 
 class CommandErrorHandler(commands.Cog, name="Command Error Handler"):
 

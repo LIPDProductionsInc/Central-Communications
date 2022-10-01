@@ -82,7 +82,7 @@ help_general = """
 @bot.event
 async def on_invite_create(invite):
     if invite.guild.id == 731391566945714226:
-        channel = bot.get_channel(731404916647657493)
+        channel = bot.get_channel(os.getenv('GuildLogChannel'))
         embed = discord.Embed(
             title='**Invite created for Trooper K Station**',
             type='rich',
@@ -207,7 +207,7 @@ async def _revivalhelp(ctx):
 @bot.command(name='note')
 @commands.has_permissions(manage_guild=True)
 async def _note(ctx, member: discord.Member, *, note = None):
-    channel = ctx.bot.get_channel(731404916647657493)
+    channel = ctx.bot.get_channel(os.getenv('GuildLogChannel'))
     logembed = discord.Embed(
         title=f'Note Created in {ctx.channel.mention} for {member.mention}',
         type='rich',
@@ -239,4 +239,4 @@ handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w'
 handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
 logger.addHandler(handler)
 
-bot.run('NzQ5OTMwMTM4MjYyNTY4OTgx.X0zI3Q.DYvVEsHZGFPSCaaavV-DWDxhpcg')
+bot.run(os.getenv('BotToken'))
