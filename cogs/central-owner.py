@@ -139,12 +139,13 @@ class OwnerCog(commands.Cog, name="Owner Commands"):
 
     @commands.command(name='rules')
     @commands.is_owner()
-    async def _rules(self, ctx):
-        embed = discord.Embed(
-            title="**Welcome to Kallam's Troop**",
-            type='rich',
-            colour = discord.Colour.dark_blue(),
-            description='''
+    async def _rules(self, ctx, github = False):
+        if github == False:
+            embed = discord.Embed(
+                title="**Welcome to Kallam's Troop**",
+                type='rich',
+                colour = discord.Colour.dark_blue(),
+                description='''
 **RULES:**
 `1.`Discord Terms of Service https://discord.com/terms and the Discord Community Guidelines https://discord.com/guidelines MUST be followed at all times.
 `2.` Please be respectful to everyone here. **No hateful messages to members**
@@ -165,7 +166,25 @@ class OwnerCog(commands.Cog, name="Owner Commands"):
             **Rules are subject to change at any point**
 **By remaining in the discord, you are acknowledging and agreeing to these rules** 
             ''')
-        await ctx.send(embed=embed)
+            await ctx.send(embed=embed)
+        else:
+            embed = discord.Embed(
+                title="**Central Communications GitHub Repository**",
+                type='rich',
+                url='http://github.com/LIPDProductionsInc/Central-Communications',
+                colour = discord.Colour.dark_blue(),
+                description='''
+**GITHUB RULES:**
+`1.` The [Discord Developer Terms of Service](https://discord.com/developers/docs/policies-and-agreements/terms-of-service), [Discord Developer Policy](https://discord.com/developers/docs/policies-and-agreements/developer-policy), and the [GitHub Site Policies](https://docs.github.com/en/site-policy/github-terms) **MUST** be followed at **ALL** times
+`2.` API Keys submitted in pull requests will **NOT** be used. If you have a premium key and would like to offer it, open a [support ticket in the Troop Discord](https://ptb.discord.com/channels/731391566945714226/944466196663775262).
+`3.` [LIPD Productions Inc.](http://github.com/LIPDProductionsInc) has the final say on what gets integrated into the bot.
+`4.` Attempting to get around the Discord API is not allowed.
+`5.` Any edits made to files under the DB folder in a pull request will **NOT** be pushed to the bot itself.
+`6.` Pull requests that are not related to the bot will be closed.
+            ''')
+            await ctx.send(embed=embed)
+            pass
+        pass
 
 def setup(bot):
     bot.add_cog(OwnerCog(bot))
