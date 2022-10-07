@@ -17,7 +17,6 @@ class CustomCog(commands.Cog):
     async def only_me(self, ctx):
         await ctx.send(f'{ctx.author.mention} the cog is working as expected')
         pass
-    
 
     @commands.command(name='juju')
     async def _juju(self, ctx):
@@ -87,7 +86,6 @@ class CustomCog(commands.Cog):
         pass
 
     @commands.command(name='streamlist', enabled=False)
-    @commands.enabled
     async def _streamlist(self, ctx):
         print('HasRoot link requested...')
         await ctx.send("Here's an automatically updated list of people who stream on Revival RP: <https://revivalrp.hasroot.com/>")
@@ -123,6 +121,12 @@ Cheyenne, WY 82003""")
     async def _avtarsubmission(self, ctx):
         print('Someone is submitting an avatar...')
         await ctx.send("Submit your avatar here! <https://form.gle/XAmL5MordR6RccJC9>")
+        pass
+
+    @commands.command(name='source')
+    async def _source(self, ctx):
+        print('Someone is requesting the source code...')
+        await ctx.send("The source code for this bot can be found here: <http://github.com/LIPDProductionsInc/Central-Communications>")
         pass
 
 def setup(bot):

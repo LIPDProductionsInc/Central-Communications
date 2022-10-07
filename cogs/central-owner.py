@@ -139,8 +139,8 @@ class OwnerCog(commands.Cog, name="Owner Commands"):
 
     @commands.command(name='rules')
     @commands.is_owner()
-    async def _rules(self, ctx, github = False):
-        if github == False:
+    async def _rules(self, ctx, github = None):
+        if github == None:
             embed = discord.Embed(
                 title="**Welcome to Kallam's Troop**",
                 type='rich',
