@@ -30,6 +30,7 @@ initial_extensions = ['cogs.central-economy',
                       'cogs.central-custom',
                       'cogs.central-owner',
                       'cogs.central-slots'
+                      'cogs.central-shift'
                       ]
 
 

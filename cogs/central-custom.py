@@ -85,11 +85,11 @@ class CustomCog(commands.Cog):
         await ctx.send("Running 0.0.8.0")
         pass
 
-    @commands.command(name='streamlist', enabled=False)
-    async def _streamlist(self, ctx):
-        print('HasRoot link requested...')
-        await ctx.send("Here's an automatically updated list of people who stream on Revival RP: <https://revivalrp.hasroot.com/>")
-        pass
+    #@commands.command(name='streamlist', enabled=False)
+    #async def _streamlist(self, ctx):
+    #    print('HasRoot link requested...')
+    #    await ctx.send("Here's an automatically updated list of people who stream on Revival RP: <https://revivalrp.hasroot.com/>")
+    #    pass
     
     @commands.command(name='po-box')
     async def _pobox(self, ctx):
